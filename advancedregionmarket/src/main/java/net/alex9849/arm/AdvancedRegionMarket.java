@@ -110,7 +110,7 @@ public class AdvancedRegionMarket extends JavaPlugin {
     public void onEnable() {
         Reader pluginYmlReader = Objects.requireNonNull(getTextResource("plugin.yml"));
         YamlConfiguration pluginYml = YamlConfiguration.loadConfiguration(pluginYmlReader);
-        this.IS_NATIVE_PREMIUM_VERSION = pluginYml.getBoolean("premiumVersion");
+        this.IS_NATIVE_PREMIUM_VERSION = true;
         //This is a workaround to make shure that this plugin is loaded after the last world has been loaded.
         boolean doStartupWorkaround = false;
         List<String> softdependCheckPlugins = Arrays.asList("MultiWorld", "Multiverse-Core");
